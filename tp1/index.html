@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./acceuil.css">
+    <title>TP1</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+<div id="app">
+    <div id="cadre" :style="color">
+
+        <div>
+            <h1>{{fullname}}</h1>
+            <h2 >{{genre}} - {{ageDisplay}} ans</h2>
+            <img :src="urlImage">
+        </div>
+
+        <div id="depara">
+        
+            <p v-if="numero_ine">Numéro INE: {{numero_ine}}</p><p v-else>Numéro INE: Non concerné</p>
+            <p>Département : {{departement}}</p>
+            <p>Promotion : {{promo}}</p>
+            <div id="compoli">
+                <ul>
+                    <li v-for="item in etoile">{{item.level}} - {{item.label}}</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./app.js"></script>
+</html>
